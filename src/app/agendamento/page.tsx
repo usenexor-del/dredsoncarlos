@@ -40,6 +40,9 @@ function BookingContent() {
     if (!selDate)           { showToast("Selecione uma data!", "error");   return; }
     if (!selTime)           { showToast("Selecione um horário!", "error"); return; }
 
+    // Abre janela ANTES do async para evitar bloqueio do navegador
+    const whatsappWindow = window.open("", "_blank");
+
     setLoading(true);
     try {
       const res = await fetch("/api/booking", {
@@ -62,9 +65,15 @@ function BookingContent() {
 
       const data = await res.json();
       if (!res.ok) throw new Error(data.error ?? "Erro ao agendar");
+
+      // Redireciona a janela já aberta para o WhatsApp
+      if (data.whatsappUrl && whatsappWindow) {
+        whatsappWindow.location.href = data.whatsappUrl;
+      }
+
       setDone(true);
-      if (data.whatsappUrl) setTimeout(() => window.open(data.whatsappUrl, "_blank"), 1500);
     } catch (err: unknown) {
+      whatsappWindow?.close();
       showToast(err instanceof Error ? err.message : "Erro ao confirmar. Tente novamente.", "error");
     } finally {
       setLoading(false);
