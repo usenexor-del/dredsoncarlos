@@ -54,7 +54,7 @@ export function buildBookingEmailDoctor(data: {
       </td>
       <td style="vertical-align:middle;text-align:right;width:130px;">
         <div style="width:110px;height:110px;border-radius:50%;border:3px solid #C9A44A;overflow:hidden;display:inline-block;">
-          <img src="https://pjzvqvuiwlcuvnadjayj.supabase.co/storage/v1/object/public/assets/dr-edson.jpg" width="110" height="110" style="object-fit:cover;display:block;" alt="Dr. Edson Carlos" onerror="this.style.display='none'"/>
+          <img src="https://dredsoncarlos-kkgz.vercel.app/dr-edson.jpg" width="110" height="110" style="object-fit:cover;display:block;" alt="Dr. Edson Carlos" onerror="this.style.display='none'"/>
         </div>
       </td>
     </tr></table>
@@ -176,7 +176,7 @@ export function buildBookingEmailClient(data: {
       </td>
       <td style="vertical-align:middle;text-align:right;width:130px;">
         <div style="width:110px;height:110px;border-radius:50%;border:3px solid #C9A44A;overflow:hidden;display:inline-block;background:#F0EBE2;">
-          <img src="https://pjzvqvuiwlcuvnadjayj.supabase.co/storage/v1/object/public/assets/dr-edson.jpg" width="110" height="110" style="width:110px;height:110px;object-fit:cover;display:block;" alt="Dr. Edson Carlos" onerror="this.style.display='none'"/>
+          <img src="https://dredsoncarlos-kkgz.vercel.app/dr-edson.jpg" width="110" height="110" style="width:110px;height:110px;object-fit:cover;display:block;" alt="Dr. Edson Carlos" onerror="this.style.display='none'"/>
         </div>
       </td>
     </tr></table>
